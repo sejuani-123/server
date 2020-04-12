@@ -1,0 +1,95 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>myfilter1</filter-name>
+    <filter-class>com.zn.filter.CheckPermissionfilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>myfilter1</filter-name>
+    <!-- 指定filter的处理地址未上传文件的servlet -->
+    <url-pattern>/fileUpload</url-pattern>
+  </filter-mapping>
+
+
+  <filter>
+    <filter-name>myfilter2</filter-name>
+    <filter-class>com.zn.filter.CheckPermissionfilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>myfilter2</filter-name>
+    <!-- 指定filter的处理地址为查看所有元数据servlet -->
+    <url-pattern>/queryAllFileServlet</url-pattern>
+  </filter-mapping>
+
+
+  <filter>
+    <filter-name>myfilter3</filter-name>
+    <filter-class>com.zn.filter.CheckPermissionfilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>myfilter3</filter-name>
+    <!-- 指定filter的处理地址为查看所有元数据servlet -->
+    <url-pattern>/fileDecode</url-pattern>
+  </filter-mapping>
+
+
+
+  <!--文件上传servlet-->
+  <servlet>
+    <servlet-name>fileUpload</servlet-name>
+    <servlet-class>com.zn.servlet.FileUpLoadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fileUpload</servlet-name>
+    <url-pattern>/fileUpload</url-pattern>
+  </servlet-mapping>
+
+
+  <!--文件解密servlet-->
+  <servlet>
+    <servlet-name>fileDecode</servlet-name>
+    <servlet-class>com.zn.servlet.FileDecodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fileDecode</servlet-name>
+    <url-pattern>/fileDecode</url-pattern>
+  </servlet-mapping>
+
+  <!--文件解密servlet-->
+  <servlet>
+    <servlet-name>fileDownLoad</servlet-name>
+    <servlet-class>com.zn.servlet.FileDownLoadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fileDownLoad</servlet-name>
+    <url-pattern>/fileDownLoad</url-pattern>
+  </servlet-mapping>
+
+  <!--请求私钥servlet-->
+  <servlet>
+    <servlet-name>getPublicKey</servlet-name>
+    <servlet-class>com.zn.servlet.GetPublicKeyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getPublicKey</servlet-name>
+    <url-pattern>/getPublicKey</url-pattern>
+  </servlet-mapping>
+
+
+  <!--查询所有数据servlet-->
+  <servlet>
+    <servlet-name>queryAllFileServlet</servlet-name>
+    <servlet-class>com.zn.servlet.queryAllFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>queryAllFileServlet</servlet-name>
+    <url-pattern>/queryAllFileServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
+
+
