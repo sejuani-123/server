@@ -25,7 +25,7 @@
     <!--内嵌jetty服务器，并且支持jsp-->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
-      <version>9.4.14.v20181114</version>
+      <version>9.4.34.v20201102</version>
       <artifactId>jetty-webapp</artifactId>
     </dependency>
     <dependency>
